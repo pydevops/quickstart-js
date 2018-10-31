@@ -57,12 +57,13 @@ limitations under the License.
             <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Sign In</button>
             &nbsp;&nbsp;&nbsp;
   
-            <!-- Container where we'll display the user details -->
+            <!-- Container where we'll display the user details
             <div class="quickstart-user-details-container">
               Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
               <div>Firebase auth <code>currentUser</code> object value:</div>
-              <pre><code id="quickstart-account-details">null</code></pre>
+             <pre><code id="quickstart-account-details">null</code></pre>
             </div>
+          -->
           </div>
         </div>
   
@@ -90,7 +91,8 @@ limitations under the License.
   </div>
 
   <!-- paste the web app config below-->
-
+  <script src="/__/firebase/5.5.6/firebase.js"></script>
+  
 
   <!-- paste the web app config above-->
 
@@ -198,16 +200,16 @@ limitations under the License.
           var uid = user.uid;
           var providerData = user.providerData;
           // [START_EXCLUDE]
-          document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
+          //document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
           document.getElementById('quickstart-sign-in').textContent = 'Sign out';
-          document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
+          //document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
           // [END_EXCLUDE]
         } else {
           // User is signed out.
           // [START_EXCLUDE]
-          document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
+          //document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
           document.getElementById('quickstart-sign-in').textContent = 'Sign in';
-          document.getElementById('quickstart-account-details').textContent = 'null';
+          //document.getElementById('quickstart-account-details').textContent = 'null';
           // [END_EXCLUDE]
         }
         // [START_EXCLUDE silent]
